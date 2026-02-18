@@ -11,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Poiret+One&family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&family=Uncial+Antiqua&family=Yanone+Kaffeesatz:wght@200..700&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 </head>
-<body>
-<nav class="bg-brand-primary shadow-md">
+<body class="flex flex-col items-center justify-center">
+<nav class="bg-brand-primary-800 shadow-md w-full">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex justify-center items-center py-4">
       
@@ -25,7 +25,7 @@
   </div>
 </nav>
     <!--- Hero Section  -->
-    <section class="flex flex-col items-center justify-center min-h-screen p-4 bg-[url('https://i0.wp.com/www.socovesa.cl/blog/web/wp-content/uploads/2025/07/departamentos-modernos-socovesa.png?fit=1920%2C1080&ssl=1')] bg-cover bg-center">
+    <section class="flex w-full md:max-w-[1280px] flex-col items-center justify-center min-h-screen p-4 bg-[url('https://i0.wp.com/www.socovesa.cl/blog/web/wp-content/uploads/2025/07/departamentos-modernos-socovesa.png?fit=1920%2C1080&ssl=1')] bg-cover bg-center">
       <div class="relative w-full max-w-xl p-4 md:p-10 text-center rounded-[16px] overflow-hidden
 
         /* --- EFECTO BASE --- */
@@ -41,20 +41,53 @@
             Descubre tu nuevo hogar
         </h1> 
          <p class="text-lg text-white">Encontraremos el lugar perfecto para ti.</p>
-         <button class="font-yrsa mt-4 px-4 py-2 text-[16px] font-light text-white bg-brand-primary rounded-sm w-full h-[44px] hover:bg-[#276974] cursor-pointer">
+         <button class="font-yanone mt-4 px-4 py-2 text-[20px] font-light text-white bg-brand-primary-800 rounded-sm w-full h-[44px] hover:bg-[#276974] cursor-pointer">
           Ver propiedades
          </button>
       </div>
     </section>
  <!--- Propuesta de valor  -->
-    <section class="flex flex-col items-center justify-center p-4 bg-white md:m-10 m-4">
+    <section class="flex flex-col md:max-w-[1280px] w-full items-center justify-center p-4 bg-white md:m-10 m-4">
       <div>
-        <h2 class="md:text-6xl font-yanone font-bold mb-4 text-brand-primary text-4xl">
+        <h2 class="md:text-6xl font-yanone font-bold mb-4 text-brand-primary-800 text-4xl">
           Desde la planeación financiera hasta la adquisición 
         </h2>
         <p class="text-xl md:text-xl font-light text-grey-800 font-yrsa">
           Te acompañamos desde la búsqueda inicial hasta que tienes las llaves en mano, asegurando un proceso claro y sin estrés.
         </p>
+      </div>
+      <!-- cards -->
+      <div class="flex flex-col md:flex-row md:space-x-4 w-full mt-10">
+        <div class=" flex flex-row md:flex-col items-center justify-center bg-brand-primary-800 p-4 rounded-3xl mb-4 md:mb-0 md:w-1/4">
+          <img src="assets/search.svg" alt="search icon" class="mr-4 w-12 h-auto">
+          <div class="flex flex-col items-start">
+            <h3 class="text-left md:text-center font-yanone text-4xl font-normal mb-2 text-white">Encuentra tu hogar ideal</h3>
+            <p class="text-white text-left md:text-center">Tenemos las mejores opciones para tus necesidades, ubicación y estilo de vida.</p>
+          </div>
+        </div>
+        <div class="flex flex-row md:flex-col items-center justify-center bg-brand-primary-700 p-4 rounded-3xl mb-4 md:mb-0 md:w-1/4">
+          <img src="assets/smile.svg" alt="search icon" class="mr-4 w-12 h-auto">
+          <div class="flex flex-col items-start">
+            <h3 class="text-left md:text-center font-yanone text-4xl font-normal mb-2 text-white">Asesoría integral en cada paso</h3>
+            <p class="text-white text-left md:text-center">Te guiamos en todo el proceso de compra para que tomes decisiones seguras y bien informadas.</p>
+          </div>
+        </div>
+        <div class="flex flex-row md:flex-col items-center justify-center bg-brand-primary-600 p-4 rounded-3xl mb-4 md:mb-0 md:w-1/4">
+          <img src="assets/invoice.svg" alt="search icon" class="mr-4 w-12 h-auto">
+          <div class="flex flex-col items-start">
+            <h3 class="text-left md:text-center font-yanone text-4xl font-normal mb-2 text-white">Planeación y gestión de crédito</h3>
+            <p class="text-white text-left md:text-center">Diseñamos contigo la mejor estrategia de financiamiento y tramitamos tu crédito hipotecario.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-row md:flex-col items-center justify-center bg-brand-primary-500 p-4 rounded-3xl mb-4 md:mb-0 md:w-1/4">
+          <img src="assets/color.svg" alt="search icon" class="mr-4 w-12 h-auto">
+          <div class="flex flex-col items-start">
+            <h3 class="text-left md:text-center font-yanone text-4xl font-normal mb-2 text-white">Diseño y personalización</h3>
+            <p class="text-white text-left md:text-center">Transformamos tu propiedad para que refleje tu estilo o maximice su potencial como inversión.</p>
+          </div>
+          
+
       </div>
     </section>
 
