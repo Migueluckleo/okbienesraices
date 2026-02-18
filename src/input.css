@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@theme {
+  /* Esto crea automáticamente la clase 'font-cinzel' */
+  --font-cinzel: "Cinzel", serif;
+  --font-yanone: "Yanone Kaffeesatz", sans-serif;
+  --font-yrsa: "Yrsa", sans-serif;
+  /* Si quisieras agregar las otras, sería así: */
+  --font-lato: "Lato", sans-serif;
+
+
+  --color-brand-primary: #0E3B43;
+}
