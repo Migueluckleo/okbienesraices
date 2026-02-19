@@ -655,6 +655,11 @@
       padding: calc(var(--spacing) * 12);
     }
   }
+  .md\:py-20 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
   .md\:py-\[80px\] {
     @media (width >= 48rem) {
       padding-block: 80px;
