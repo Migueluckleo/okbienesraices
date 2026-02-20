@@ -67,10 +67,10 @@ function renderizarCatalogo(lista) {
                          class="w-full h-[220px] object-cover transition-transform duration-500 group-hover:scale-105">
                 </div>
                 <div class="flex flex-row justify-between items-baseline mt-1">
-                    <h2 class="font-yanone text-3xl font-bold text-gray-900 leading-none uppercase italic">${prop.nombre}</h2>
-                    <p class="font-yanone text-3xl font-bold text-brand-primary-800 leading-none">${prop.precio}</p>
+                    <h2 class="font-roboto-condensed text-xl md:text-xl font-bold text-gray-900 leading-none">${prop.nombre}</h2>
+                    <p class="font-roboto-condensed text-xl md:text-xl font-bold text-brand-primary-800 leading-none">${prop.precio}</p>
                 </div>
-                <p class="font-yrsa text-gray-600 text-sm md:text-base font-semibold tracking-wide uppercase italic">
+                <p class="font-roboto-condensed text-gray-600 text-sm md:text-base font-semibold tracking-wide">
                     ${prop.specs}
                 </p>
             </article>
