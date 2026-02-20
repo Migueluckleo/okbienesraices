@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
 
 @theme {
   /* Esto crea automáticamente la clase 'font-cinzel' */
@@ -17,4 +16,22 @@
   --color-brand-primary-500: #316A74;
 
   
+}
+/* Añade esto a tu archivo de estilos */
+.glide__arrow {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.glide__arrow:hover {
+    opacity: 1;
+    background-color: var(--color-brand-primary-800) !important;
+}
+
+/* Para que las imágenes no se deformen */
+.glide__slide img {
+    user-select: none;
+    -webkit-user-drag: none;
 }
