@@ -1,0 +1,22 @@
+{
+  "propiedades": [
+    {
+      "id": "san-jose",
+      "nombre": "Departamento San José",
+      "precio": "$3,500,000 MXN",
+      "specs": "2 HAB • 2 BAÑOS • 80 M²",
+      "descripcion": "Descripción detallada del departamento aquí...",
+      "amenidades": ["Elevador", "GYM", "Alberca", "Seguridad 24/7"],
+      "imagenes": ["recibidor.png", "cocina.jpg", "sala.webp" ]
+    },
+    {
+      "id": "casa-lomas",
+      "nombre": "Casa Lomas Altas",
+      "precio": "$5,200,000 MXN",
+      "specs": "4 HAB • 3 BAÑOS • 250 M²",
+      "descripcion": "Hermosa casa con amplios jardines...",
+      "amenidades": ["Jardín", "Terraza", "Cochera 3 autos"],
+      "imagenes": ["exterior.webp", "sala2.webp"]
+    }
+  ]
+}
