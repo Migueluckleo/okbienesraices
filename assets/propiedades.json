@@ -1,22 +1,22 @@
 {
   "propiedades": [
     {
-      "id": "san-jose",
-      "nombre": "Departamento San José",
-      "precio": "$3,500,000 MXN",
-      "specs": "2 HAB • 2 BAÑOS • 80 M²",
-      "descripcion": "Descripción detallada del departamento aquí...",
-      "amenidades": ["Elevador", "GYM", "Alberca", "Seguridad 24/7"],
-      "imagenes": ["recibidor.png", "cocina.jpg", "sala.webp" ]
+      "id": "ATRIA tower Formato A",
+      "nombre": "ATRIA Tower Formato A",
+      "precio": "$2,670,000 MXN",
+      "specs": "1 HAB • 1 BAÑO",
+      "descripcion": "Eleva tu estilo de vida en un espacio donde el diseño de vanguardia se encuentra con la calidez del hogar. Con una cocina de autor que fusiona mármoles profundos y maderas nobles, cada detalle en ATRIA ha sido curado para quienes no aceptan menos que la excelencia.",
+      "amenidades": ["Lobby", "Coworking", "Sky Bar", "Cine", "Fire Pit", "Jardin Zen", "Yoga Deck", "Bici Racks", "BBQ Zone", "Mailbox"],
+      "imagenes": ["atria-cocina.jpg", "atria-recamara.jpg", "atria-baño.jpg", "atria-A.png"]
     },
     {
-      "id": "casa-lomas",
-      "nombre": "Casa Lomas Altas",
-      "precio": "$5,200,000 MXN",
-      "specs": "4 HAB • 3 BAÑOS • 250 M²",
-      "descripcion": "Hermosa casa con amplios jardines...",
-      "amenidades": ["Jardín", "Terraza", "Cochera 3 autos"],
-      "imagenes": ["exterior.webp", "sala2.webp"]
+      "id": "ATRIA tower Formato B",
+      "nombre": "ATRIA Tower Formato B",
+      "precio": "$3,000,000 MXN",
+      "specs": "2 HAB • 1 BAÑO",
+      "descripcion": "Eleva tu estilo de vida en un espacio donde el diseño de vanguardia se encuentra con la calidez del hogar. Con una cocina de autor que fusiona mármoles profundos y maderas nobles, cada detalle en ATRIA ha sido curado para quienes no aceptan menos que la excelencia.",
+      "amenidades": ["Lobby", "Coworking", "Sky Bar", "Cine", "Fire Pit", "Jardin Zen", "Yoga Deck", "Bici Racks", "BBQ Zone", "Mailbox"],
+      "imagenes": ["atria-B.png"]
     }
   ]
 }
