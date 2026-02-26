@@ -1,21 +1,46 @@
 {
+  "infoDesarrollos": {
+    "atria": {
+      "titulo": "Atria Tower",
+      "subtitulo": "Colonia Americana",
+      "descripcion": "Descubre espacios diseñados para elevar tu estilo de vida. Contamos con las mejores ubicaciones y acabados de lujo en cada uno de nuestros desarrollos.",
+      "imagen": "assets/atria.png",
+      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Atria%20Tower"
+    },
+    "severo": {
+      "titulo": "Severo Díaz",
+      "subtitulo": "Zona Lafayette",
+      "descripcion": "Un refugio urbano. Diseñado bajo la comodidad y la funcionalidad en una de las zonas con mayor plusvalía e inversión.",
+      "imagen": "assets/severo.png",
+      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Severo%20Díaz"
+    },
+    "villamorelos": {
+      "titulo": "Villamorelos",
+      "subtitulo": "Corazón Cultural",
+      "descripcion": "Conoce un nuevo estilo de vida, en Villamorelos encontrarás el confort con la mejor ubicación en el corazón de un entorno de cultura y gran demanda.",
+      "imagen": "assets/villamorelos.png",
+      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Villamorelos"
+    }
+  },
   "propiedades": [
     {
       "id": "ATRIA tower Formato A",
+      "desarrollo": "atria",
       "nombre": "ATRIA Tower Formato A",
       "precio": "$2,670,000 MXN",
-      "specs": "1 HAB • 1 BAÑO",
+      "specs": "1 Habitación • 1 Baño • 50 m²",
       "descripcion": "Eleva tu estilo de vida en un espacio donde el diseño de vanguardia se encuentra con la calidez del hogar. Con una cocina de autor que fusiona mármoles profundos y maderas nobles, cada detalle en ATRIA ha sido curado para quienes no aceptan menos que la excelencia.",
-      "amenidades": ["Lobby", "Coworking", "Sky Bar", "Cine", "Fire Pit", "Jardin Zen", "Yoga Deck", "Bici Racks", "BBQ Zone", "Mailbox"],
-      "imagenes": ["atria-cocina.jpg", "atria-recamara.jpg", "atria-baño.jpg", "atria-A.png"]
+      "amenidades": ["Lobby", "Coworking", "Sky Bar", "Cine", "Yoga Deck", "Bici Racks", "BBQ Zone", "Mailbox"],
+      "imagenes": ["atria-cocina.jpg", "atria-A.png"]
     },
     {
       "id": "ATRIA tower Formato B",
+      "desarrollo": "atria",
       "nombre": "ATRIA Tower Formato B",
-      "precio": "$3,000,000 MXN",
-      "specs": "2 HAB • 1 BAÑO",
-      "descripcion": "Eleva tu estilo de vida en un espacio donde el diseño de vanguardia se encuentra con la calidez del hogar. Con una cocina de autor que fusiona mármoles profundos y maderas nobles, cada detalle en ATRIA ha sido curado para quienes no aceptan menos que la excelencia.",
-      "amenidades": ["Lobby", "Coworking", "Sky Bar", "Cine", "Fire Pit", "Jardin Zen", "Yoga Deck", "Bici Racks", "BBQ Zone", "Mailbox"],
+      "precio": "$1,500,000 MXN",
+      "specs": "1 Habitación • 1 Baño • 50 m²",
+      "descripcion": "Espacio optimizado y moderno, ideal para primera inversión.",
+      "amenidades": ["Lobby", "Coworking"],
       "imagenes": ["atria-B.png"]
     }
   ]

@@ -35,11 +35,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Yanone+Kaffeesatz:wght@200..700&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 </head>
 
-<body class="flex flex-col items-center justify-center bg-gray-50">
+<body class="flex flex-col items-center justify-center bg-gray-50" style="font-family: 'Albert Sans', sans-serif;">
 
   <nav class="bg-brand-primary-800 shadow-md w-full sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4">
@@ -51,29 +51,48 @@
     </div>
   </nav>
 
-  <section
-    class="flex w-full flex-col items-center justify-center min-h-screen p-4 bg-[url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center">
-    <div
-      class="relative w-full max-w-2xl p-6 md:p-10 text-center rounded-[20px] overflow-hidden bg-black/40 backdrop-blur-md border border-white/20 shadow-[inset_0px_1px_1px_0px_rgba(255,255,255,0.35),0px_10px_30px_rgba(0,0,0,0.5)]">
-      <h1 class="font-roboto-condensed font-bold mb-4 text-white text-2xl md:text-4xl leading-tight drop-shadow-lg">
-        Tu Primera Inversión Airbnb, <span class="text-brand-primary-200">Estructurada.</span>
-      </h1>
-      <p class="font-roboto-condensed text-md md:text-lg text-gray-100 mb-8 font-light">
-        Invierte en Guadalajara desde el <strong class="text-white font-semibold">10% de enganche</strong>.
-        No solo vendemos departamentos; diseñamos tu libertad financiera con datos reales.
-      </p>
-      <a class="block w-full font-roboto-condensed tracking-wider text-md bg-brand-primary-800 hover:bg-brand-primary-700 text-white py-4 px-8 rounded-md shadow-lg transition-all transform hover:-translate-y-1 cursor-pointer border border-white/10"
-        href="lobby.html">Ver propiedades</a>
+  <!-- HERO SECTION: título y descripción ARRIBA, imagen ABAJO -->
+  <section class="w-full">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+
+      <!-- Fila superior: título izquierda, descripción + CTA derecha -->
+      <div class="flex flex-col md:flex-row w-full md:items-end md:justify-between gap-6 pt-8 pb-6 md:pt-12 md:pb-8">
+        <div class="flex flex-col">
+        
+          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
+            Tu Primera Inversión<br>Airbnb, <span class="text-brand-primary-600">Estructurada.</span>
+          </h1>
+        </div>
+        <div class="w-full md:max-w-xs flex flex-col gap-4 md:pb-2">
+          <p class="text-sm text-gray-500 leading-relaxed">
+            Descubre espacios diseñados para elevar tu estilo de vida. Contamos con las mejores ubicaciones y acabados de lujo en cada uno de nuestros desarrollos.
+          </p>
+          <a href="lobby.html"
+            class="inline-block bg-brand-primary-800 hover:bg-brand-primary-700 text-white text-sm font-semibold tracking-wider py-3 px-6 rounded-md shadow-lg transition-all transform hover:-translate-y-0.5 text-center">
+            Ver desarrollos
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagen full-width debajo del texto -->
+      <div class="pb-8 md:pb-12">
+        <img
+          src="assets/heroe-lobby-moderno.jpg"
+          alt="Interior de lujo"
+          class="w-full h-64 md:h-[520px] object-cover rounded-2xl shadow-lg"
+        >
+      </div>
+
     </div>
   </section>
 
   <div>
     <section class="flex flex-col md:max-w-7xl w-full items-center justify-center px-4 py-10 md:py-16">
       <div class="text-center max-w-3xl mb-12">
-        <h2 class="text-2xl md:text-4xl font-roboto-condensed font-bold mb-4 text-brand-primary-800">
+        <h2 class="text-2xl md:text-4xl font-bold mb-4 text-brand-primary-800">
           No necesitas el millón hoy.<br>Necesitas Estructura.
         </h2>
-        <p class="text-md font-medium text-gray-600 font-roboto-condensed">
+        <p class="text-md font-medium text-gray-600">
           El error común es invertir sin análisis. Nosotros te convertimos en un inversionista sofisticado con un plan
           paso a paso.
         </p>
@@ -85,8 +104,8 @@
           <img src="assets/invoice.svg" alt="Finanzas"
             class="mr-4 md:mr-0 w-12 h-12 md:mb-6 opacity-90 group-hover:scale-110 transition">
           <div class="text-left md:text-center">
-            <h3 class="font-roboto-condensed text-xl font-normal text-white mb-1">Análisis Financiero</h3>
-            <p class="text-brand-primary-100 font-roboto-condensed text-sm leading-snug text-white">
+            <h3 class="text-xl font-normal text-white mb-1">Análisis Financiero</h3>
+            <p class="text-sm leading-snug text-white">
               Proyección de rentabilidad real y comparativa bancaria por escrito antes de que firmes nada.
             </p>
           </div>
@@ -97,8 +116,8 @@
           <img src="assets/search.svg" alt="Estrategia"
             class="mr-4 md:mr-0 w-12 h-12 md:mb-6 opacity-90 group-hover:scale-110 transition">
           <div class="text-left md:text-center">
-            <h3 class="font-roboto-condensed text-xl font-normal text-white mb-1">Estrategia de Crédito</h3>
-            <p class="text-brand-primary-100 font-roboto-condensed text-md leading-snug text-white">
+            <h3 class="text-xl font-normal text-white mb-1">Estrategia de Crédito</h3>
+            <p class="text-md leading-snug text-white">
               Te ayudamos a elegir el banco correcto hoy para asegurar tu escrituración mañana.
             </p>
           </div>
@@ -109,8 +128,8 @@
           <img src="assets/smile.svg" alt="Acompañamiento"
             class="mr-4 md:mr-0 w-12 h-12 md:mb-6 opacity-90 group-hover:scale-110 transition">
           <div class="text-left md:text-center">
-            <h3 class="font-roboto-condensed text-xl font-normal text-white mb-1">Acompañamiento Total</h3>
-            <p class="text-brand-primary-100 font-roboto-condensed text-md leading-snug text-white">
+            <h3 class="text-xl font-normal text-white mb-1">Acompañamiento Total</h3>
+            <p class="text-md leading-snug text-white">
               "No te dejamos en la firma". Te guiamos hasta que tu depa esté listo para rentarse.
             </p>
           </div>
@@ -121,8 +140,8 @@
           <img src="assets/color.svg" alt="Diseño"
             class="mr-4 md:mr-0 w-12 h-12 md:mb-6 opacity-90 group-hover:scale-110 transition">
           <div class="text-left md:text-center">
-            <h3 class="font-roboto-condensed text-xl font-normal text-white mb-1">Airbnb "Llave en Mano"</h3>
-            <p class="text-brand-primary-100 font-roboto-condensed text-md leading-snug text-white">
+            <h3 class="text-xl font-normal text-white mb-1">Airbnb "Llave en Mano"</h3>
+            <p class="text-md leading-snug text-white">
               Interiorismo estratégico diseñado para maximizar la ocupación y tarifas de tu renta corta.
             </p>
           </div>
@@ -133,29 +152,26 @@
     <section class="flex flex-col md:max-w-7xl w-full items-center justify-center px-4 py-10 md:py-16">
 
       <div class="flex flex-col items-center gap-4 text-center max-w-3xl mb-12">
-        <h2 class="text-2xl md:text-4xl font-roboto-condensed font-bold mb-4 text-brand-primary-800">
+        <h2 class="text-2xl md:text-4xl font-bold mb-4 text-brand-primary-800">
           Ubicaciones OK
         </h2>
-        <p class="text-md font-medium text-gray-600 font-roboto-condensed">
+        <p class="text-md font-medium text-gray-600">
           Nos enfocamos en las zonas de mayor plusvalía y demanda para rentas vacacionales en Guadalajara. Aquí te
           presentamos dos de nuestras favoritas:
         </p>
-
       </div>
 
       <div class="flex flex-col md:flex-row gap-6 w-full">
 
         <div class="relative w-full h-100 md:h-125 md:flex-1 shrink-0 rounded-2xl shadow-xl overflow-hidden group">
-
           <img src="assets/zapopan.png" alt="Zapopan"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-
           <div
             class="absolute bottom-0 inset-x-0 p-6 md:p-8 bg-black/20 backdrop-blur-sm border-t border-white/20 shadow-[inset_0px_1px_1px_0px_rgba(255,255,255,0.4)]">
-            <h3 class="text-2xl md:text-4xl font-roboto-condensed font-bold text-white mb-2 drop-shadow-md">
+            <h3 class="text-2xl md:text-4xl font-bold text-white mb-2 drop-shadow-md">
               Zapopan
             </h3>
-            <p class="text-gray-100 font-roboto-condensed text-md  leading-snug drop-shadow-sm">
+            <p class="text-gray-100 text-md leading-snug drop-shadow-sm">
               El corazón moderno de la zona metropolitana, con una alta demanda de rentas vacacionales y excelente
               plusvalía.
             </p>
@@ -163,16 +179,14 @@
         </div>
 
         <div class="relative w-full h-100 md:h-125 md:flex-1 shrink-0 rounded-2xl shadow-xl overflow-hidden group">
-
           <img src="assets/GDL.png" alt="Guadalajara"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-
           <div
             class="absolute bottom-0 inset-x-0 p-6 md:p-8 bg-black/20 backdrop-blur-sm border-t border-white/20 shadow-[inset_0px_1px_1px_0px_rgba(255,255,255,0.4)]">
-            <h3 class="text-2xl md:text-4xl font-roboto-condensed font-bold text-white mb-2 drop-shadow-md">
+            <h3 class="text-2xl md:text-4xl font-bold text-white mb-2 drop-shadow-md">
               Guadalajara
             </h3>
-            <p class="text-gray-100 font-roboto-condensed text-md leading-snug drop-shadow-sm">
+            <p class="text-gray-100 text-md leading-snug drop-shadow-sm">
               La perla tapatía, con su vibrante cultura y economía en crecimiento. Un hotspot para rentas vacacionales.
             </p>
           </div>
@@ -182,10 +196,10 @@
     </section>
 
     <section class="flex flex-col md:max-w-7xl w-full items-center justify-center px-4 py-10 md:py-16">
-      <h2 class="text-2xl md:text-4xl font-roboto-condensed font-bold mb-4 text-brand-primary-800">
+      <h2 class="text-2xl md:text-4xl font-bold mb-4 text-brand-primary-800">
         Nuestros servicios
       </h2>
-      <p class="text-md font-medium text-gray-600 font-roboto-condensed">
+      <p class="text-md font-medium text-gray-600">
         No solo vendemos departamentos, diseñamos tu libertad financiera con datos reales. Aquí te mostramos cómo
         podemos ayudarte a estructurar tu inversión.
       </p>
@@ -193,17 +207,15 @@
       <div class="flex flex-col md:flex-row gap-4 w-full mt-8">
         <div class="flex-1 bg-gray-100 shadow-lg overflow-hidden rounded-2xl w-full">
           <div class="p-6 md:p-8 h-full flex flex-col">
-            <h3 class="text-2xl md:text-4xl font-roboto-condensed font-bold text-brand-primary-500 mb-2">Créditos
+            <h3 class="text-2xl md:text-4xl font-bold text-brand-primary-500 mb-2">Créditos
               hipotecarios</h3>
-
-            <p class="text-gray-600 font-roboto-condensed text-md leading-snug mb-8">
+            <p class="text-gray-600 text-md leading-snug mb-8">
               ¿Aún no cuentas con un crédito o tienes dudas sobre el mejor plan hipotecario para ti? Acercate a
               nosotros, con gusto te ayudamos a conseguir el mejor trato.
             </p>
-
             <a href="https://wa.me/523315556433?text=Hola,%20quiero%20recibir%20información%20para%20un%20crédito%20hipotecario"
               target="_blank" rel="noopener noreferrer"
-              class="mt-auto font-roboto-condensed tracking-wider text-md bg-brand-primary-800 hover:bg-brand-primary-700 text-white py-4 px-8 rounded-md w-full shadow-lg transition-all transform hover:-translate-y-1 cursor-pointer border border-white/10 text-center inline-block">
+              class="mt-auto tracking-wider text-md bg-brand-primary-800 hover:bg-brand-primary-700 text-white py-4 px-8 rounded-md w-full shadow-lg transition-all transform hover:-translate-y-1 cursor-pointer border border-white/10 text-center inline-block">
               Llamar a un asesor
             </a>
           </div>
@@ -211,22 +223,18 @@
 
         <div class="flex-1 bg-gray-100 shadow-lg overflow-hidden rounded-2xl w-full">
           <div class="p-6 md:p-8 h-full flex flex-col">
-            <h3 class="text-2xl md:text-4xl font-roboto-condensed font-bold text-brand-primary-500 mb-2">Airbnb,
+            <h3 class="text-2xl md:text-4xl font-bold text-brand-primary-500 mb-2">Airbnb,
               vivienda o inversión</h3>
-
-
-            <p class="text-gray-600 font-roboto-condensed text-md leading-snug mb-8">
+            <p class="text-gray-600 text-md leading-snug mb-8">
               Quieres que tu propiedad esté lista para tus proyectos, nosotros te ayudamos a remodelar para que tu
               propiedad cumpla con tus objetivos presupuestales y personales.
             </p>
-
             <button
-              class="mt-auto font-roboto-condensed tracking-wider text-md bg-brand-primary-800 hover:bg-brand-primary-700 text-white py-4 px-8 rounded-md w-full shadow-lg transition-all transform hover:-translate-y-1 cursor-pointer border border-white/10">
+              class="mt-auto tracking-wider text-md bg-brand-primary-800 hover:bg-brand-primary-700 text-white py-4 px-8 rounded-md w-full shadow-lg transition-all transform hover:-translate-y-1 cursor-pointer border border-white/10">
               Ver proyectos
             </button>
           </div>
         </div>
-
       </div>
     </section>
   </div>
@@ -238,26 +246,22 @@
       <div class="flex items-center gap-4">
         <a href="#" class="text-red-600 hover:opacity-80 transition-opacity">
           <svg fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
-            <path
-              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
           </svg>
         </a>
         <a href="#" class="text-blue-500 hover:opacity-80 transition-opacity">
           <svg fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
-            <path
-              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
           </svg>
         </a>
         <a href="#" class="text-pink-500 hover:opacity-80 transition-opacity">
           <svg fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
-            <path
-              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.20 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.20 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
           </svg>
         </a>
         <a href="#" class="text-black bg-white rounded-full p-1 hover:opacity-80 transition-opacity">
           <svg fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-            <path
-              d="M12.525.02c1.31-.02 2.61-.01 3.91-.04.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.2c0 1.96-.5 3.96-1.6 5.66-1.04 1.58-2.66 2.76-4.5 3.19-1.9.43-3.95.2-5.68-.7-1.84-.96-3.2-2.6-3.7-4.63-.48-1.92-.12-4.04 1.05-5.65 1.13-1.54 2.84-2.5 4.77-2.73 1.1-.13 2.22-.05 3.3.26v4.06c-.63-.22-1.32-.3-1.96-.2-.68.1-1.3.43-1.77.92-.55.57-.86 1.37-.8 2.16.06.78.43 1.5.99 2 .62.54 1.48.8 2.3.74.8-.07 1.56-.42 2.08-1 .58-.65.9-1.55.93-2.45v-14.8z" />
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.04.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.2c0 1.96-.5 3.96-1.6 5.66-1.04 1.58-2.66 2.76-4.5 3.19-1.9.43-3.95.2-5.68-.7-1.84-.96-3.2-2.6-3.7-4.63-.48-1.92-.12-4.04 1.05-5.65 1.13-1.54 2.84-2.5 4.77-2.73 1.1-.13 2.22-.05 3.3.26v4.06c-.63-.22-1.32-.3-1.96-.2-.68.1-1.3.43-1.77.92-.55.57-.86 1.37-.8 2.16.06.78.43 1.5.99 2 .62.54 1.48.8 2.3.74.8-.07 1.56-.42 2.08-1 .58-.65.9-1.55.93-2.45v-14.8z" />
           </svg>
         </a>
       </div>

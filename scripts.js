@@ -1,14 +1,11 @@
 /**
- * scripts.js - OK Bienes Raíces
- * Maneja tanto el catálogo dinámico como la vista de detalle de propiedad.
- */
+* scripts.js - OK Bienes Raíces
+*/
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Detectamos en qué página estamos mediante la existencia de contenedores específicos
     const contenedorCatalogo = document.getElementById('contenedor-propiedades');
     const contenedorDetalle = document.getElementById('main-content');
 
-    // 1. Carga centralizada del JSON
     fetch("./assets/propiedades.json")
         .then(response => {
             if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
@@ -16,10 +13,30 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(data => {
             const propiedades = data.propiedades;
+            const infoDesarrollos = data.infoDesarrollos;
 
             // CASO A: Estamos en propiedades.html (Catálogo)
             if (contenedorCatalogo) {
-                renderizarCatalogo(propiedades);
+                const params = new URLSearchParams(window.location.search);
+                const proyectoFiltro = params.get('proyecto');
+
+                if (proyectoFiltro) {
+                    // 1. Renderizar el Hero
+                    if (infoDesarrollos && infoDesarrollos[proyectoFiltro]) {
+                        renderizarHeroDesarrollo(infoDesarrollos[proyectoFiltro]);
+                    }
+
+                    // 2. Filtrar propiedades
+                    const propiedadesFiltradas = propiedades.filter(p => p.desarrollo === proyectoFiltro);
+                    
+                    if (propiedadesFiltradas.length > 0) {
+                        renderizarCatalogo(propiedadesFiltradas);
+                    } else {
+                        mostrarErrorCatalogo("Por el momento no hay unidades disponibles para este desarrollo.");
+                    }
+                } else {
+                    renderizarCatalogo(propiedades); // Muestra todas si no hay filtro
+                }
             }
 
             // CASO B: Estamos en propiedad.html (Detalle)
@@ -42,37 +59,86 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================
-   LÓGICA DEL CATÁLOGO (propiedades.html)
-   ========================================== */
+   LÓGICA DEL HERO DINÁMICO
+========================================== */
+function renderizarHeroDesarrollo(info) {
+    const heroContainer = document.getElementById('hero-dinamico');
+    if (!heroContainer) return;
+
+    // Actualiza el título de la pestaña del navegador
+    document.title = `${info.titulo} | OK Bienes Raíces`;
+
+    heroContainer.innerHTML = `
+      <section class="w-full">
+        <div class="flex flex-col md:flex-row w-full md:items-start md:justify-between gap-6 pt-6 pb-6 md:pt-10 md:pb-8">
+          
+          <div class="flex flex-col">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
+              ${info.titulo}
+            </h1>
+            <h2 class="text-xl md:text-2xl text-gray-600 font-light mt-1">
+              ${info.subtitulo}
+            </h2>
+          </div>
+
+          <div class="w-full md:max-w-sm flex flex-col gap-4">
+            <p class="text-sm text-gray-500 leading-relaxed">
+              ${info.descripcion}
+            </p>
+            <a href="${info.enlaceContacto}" target="_blank" rel="noopener noreferrer"
+              class="inline-block bg-brand-primary-800 hover:bg-brand-primary-700 text-white text-sm font-semibold tracking-wider py-3 px-6 rounded-md shadow-lg transition-all transform hover:-translate-y-0.5 text-center">
+              Agenda una visita
+            </a>
+          </div>
+        </div>
+
+        <div class="pb-8">
+          <img src="${info.imagen}" alt="${info.titulo}" class="w-full h-64 md:h-[400px] object-cover object-center rounded-sm shadow-md">
+        </div>
+      </section>
+    `;
+
+    heroContainer.classList.remove('opacity-0');
+    heroContainer.classList.add('opacity-100');
+}
+
+/* ==========================================
+LÓGICA DEL CATÁLOGO (propiedades.html)
+========================================== */
 
 function renderizarCatalogo(lista) {
     const contenedor = document.getElementById('contenedor-propiedades');
-    contenedor.innerHTML = ""; // Limpiar mensaje de carga
+    contenedor.innerHTML = ""; 
 
     lista.forEach(prop => {
         const linkCard = document.createElement('a');
-        // El ID del JSON se inyecta directamente en la URL aquí:
         linkCard.href = `propiedad.html?id=${prop.id}`;
-        linkCard.className = "group cursor-pointer block no-underline";
+        linkCard.className = "group cursor-pointer block no-underline flex flex-col h-full";
 
-        const portada = (prop.imagenes && prop.imagenes.length > 0) 
-            ? `assets/${prop.imagenes[0]}` 
+        const portada = (prop.imagenes && prop.imagenes.length > 0)
+            ? `assets/${prop.imagenes[0]}`
             : 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop';
 
         linkCard.innerHTML = `
-            <article class="flex flex-col gap-2">
-                <div class="overflow-hidden rounded-md">
-                    <img src="${portada}" 
-                         alt="${prop.nombre}" 
-                         class="w-full h-[220px] object-cover transition-transform duration-500 group-hover:scale-105">
+            <article class="flex flex-col h-full border border-gray-200 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
+                <div class="overflow-hidden h-48 md:h-[240px]">
+                    <img src="${portada}" alt="${prop.nombre}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                 </div>
-                <div class="flex flex-row justify-between items-baseline mt-1">
-                    <h4 class="font-roboto-condensed text-xl md:text-xl font-bold text-gray-900 leading-none">${prop.nombre}</h4>
-                    <h4 class="font-roboto-condensed text-xl md:text-xl font-bold text-gray-900 leading-none">${prop.precio}</h4>
+                
+                <div class="flex flex-col flex-grow p-5">
+                    <div class="flex flex-row justify-between items-start gap-3">
+                        <h4 class="font-roboto-condensed text-lg font-bold text-gray-900 leading-tight">${prop.nombre}</h4>
+                        <h4 class="font-roboto-condensed text-lg font-bold text-gray-900 whitespace-nowrap text-right">${prop.precio}</h4>
+                    </div>
+                    
+                    <p class="text-gray-500 text-sm font-semibold tracking-wide mt-1 mb-6">${prop.specs}</p>
+                    
+                    <div class="mt-auto">
+                        <span class="block w-full bg-brand-primary-800 text-white text-center text-sm md:text-base py-3 rounded-md font-semibold group-hover:bg-brand-primary-700 transition-colors">
+                            Ver propiedad
+                        </span>
+                    </div>
                 </div>
-                <p class="font-roboto-condensed text-gray-500 text-sm md:text-base font-semibold tracking-wide">
-                    ${prop.specs}
-                </p>
             </article>
         `;
         contenedor.appendChild(linkCard);
@@ -88,56 +154,71 @@ function mostrarErrorCatalogo(msj) {
 }
 
 /* ==========================================
-   LÓGICA DE DETALLE (propiedad.html)
-   ========================================== */
-
+LÓGICA DE DETALLE (propiedad.html)
+========================================== */
 function renderizarDetalle(data) {
-    // A. Textos básicos
+    const btnAtras = document.getElementById('btn-atras-catalogo');
+    if (btnAtras && data.desarrollo) {
+        btnAtras.href = `propiedades.html?proyecto=${data.desarrollo}`;
+    }
+
+    // --- NUEVO: Botón de WhatsApp dinámico ---
+    const btnWhatsapp = document.getElementById('btn-whatsapp');
+    if (btnWhatsapp) {
+        // Formatear el mensaje
+        const mensajeWa = `Hola, me interesa la propiedad "${data.nombre}".`;
+        // Crear el enlace a WhatsApp (52 es el código de país para México)
+        const waLink = `https://wa.me/523315556433?text=${encodeURIComponent(mensajeWa)}`;
+        btnWhatsapp.href = waLink;
+    }
+    // ------------------------------------------
+
     document.title = `${data.nombre} | OK Bienes Raíces`;
     document.getElementById('prop-nombre').textContent = data.nombre;
     document.getElementById('prop-precio').textContent = data.precio;
     document.getElementById('prop-specs').textContent = data.specs;
     document.getElementById('prop-descripcion').textContent = data.descripcion;
 
-    // B. Amenidades
     const amenidadesContainer = document.getElementById('prop-amenidades');
-    amenidadesContainer.innerHTML = data.amenidades.map(item => `
-        <div class="flex items-center gap-2">
-            <span class="text-brand-primary-800">❖</span> ${item}
-        </div>
-    `).join('');
-
-    // C. Carrusel Glide.js
-    const slidesTarget = document.getElementById('glide-slides-target');
-    const imgs = data.imagenes.slice(0, 5); // Máximo 5 imágenes
-
-    slidesTarget.innerHTML = imgs.map(img => `
-        <li class="glide__slide">
-            <img src="assets/${img}" class="w-full aspect-[4/3] object-cover rounded-xl shadow-sm" alt="${data.nombre}">
-        </li>
-    `).join('');
-
-    // Configurar flechas
-    if (imgs.length > 1) {
-        document.getElementById('glide-controls').classList.remove('hidden');
+    if(amenidadesContainer) {
+        amenidadesContainer.innerHTML = data.amenidades.map(item => `
+            <div class="flex items-center gap-2">
+                <span class="text-brand-primary-800">❖</span> ${item}
+            </div>
+        `).join('');
     }
 
-    // Inicializar Glide
-    new Glide('.glide', {
-        type: imgs.length > 1 ? 'carousel' : 'slider',
-        autoplay: imgs.length > 1 ? 4000 : false,
-        hoverpause: true,
-        animationDuration: 800
-    }).mount();
+    const slidesTarget = document.getElementById('glide-slides-target');
+    if(slidesTarget) {
+        const imgs = data.imagenes.slice(0, 5); 
+        slidesTarget.innerHTML = imgs.map(img => `
+            <li class="glide__slide">
+                <img src="assets/${img}" class="w-full aspect-[4/3] object-cover rounded-xl shadow-sm" alt="${data.nombre}">
+            </li>
+        `).join('');
 
-    // D. Mostrar contenido
+        if (imgs.length > 1) {
+            document.getElementById('glide-controls').classList.remove('hidden');
+        }
+
+        new Glide('.glide', {
+            type: imgs.length > 1 ? 'carousel' : 'slider',
+            autoplay: imgs.length > 1 ? 4000 : false,
+            hoverpause: true,
+            animationDuration: 800
+        }).mount();
+    }
+
     const mainContent = document.getElementById('main-content');
-    mainContent.classList.remove('opacity-0');
-    mainContent.classList.add('opacity-100');
+    if(mainContent) {
+        mainContent.classList.remove('opacity-0');
+        mainContent.classList.add('opacity-100');
+    }
 }
 
 function mostrarErrorDetalle(msj) {
     const titulo = document.getElementById('prop-nombre');
     if (titulo) titulo.textContent = msj;
-    document.getElementById('main-content').classList.remove('opacity-0');
+    const mainContent = document.getElementById('main-content');
+    if(mainContent) mainContent.classList.remove('opacity-0');
 }
