@@ -5,21 +5,36 @@
       "subtitulo": "Colonia Americana",
       "descripcion": "Descubre espacios diseñados para elevar tu estilo de vida. Contamos con las mejores ubicaciones y acabados de lujo en cada uno de nuestros desarrollos.",
       "imagen": "assets/atria.png",
-      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Atria%20Tower"
+      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Atria%20Tower",
+      "metricas": {
+        "plusvalia": 10.6,
+        "airbnb": { "min": 879.66, "max": 1583.16 },
+        "rentaFija": { "min": 18245.32, "max": 28542.43 }
+      }
     },
     "severo": {
       "titulo": "Severo Díaz",
       "subtitulo": "Zona Lafayette",
       "descripcion": "Un refugio urbano. Diseñado bajo la comodidad y la funcionalidad en una de las zonas con mayor plusvalía e inversión.",
       "imagen": "assets/severo.png",
-      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Severo%20Díaz"
+      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Severo%20Díaz",
+      "metricas": {
+        "plusvalia": 9.8,
+        "airbnb": { "min": 950.00, "max": 1700.00 },
+        "rentaFija": { "min": 15000.00, "max": 22000.00 }
+      }
     },
     "villamorelos": {
       "titulo": "Villamorelos",
       "subtitulo": "Corazón Cultural",
       "descripcion": "Conoce un nuevo estilo de vida, en Villamorelos encontrarás el confort con la mejor ubicación en el corazón de un entorno de cultura y gran demanda.",
       "imagen": "assets/villamorelos.png",
-      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Villamorelos"
+      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Villamorelos",
+      "metricas": {
+        "plusvalia": 12.1,
+        "airbnb": { "min": 1100.00, "max": 1950.00 },
+        "rentaFija": { "min": 19000.00, "max": 30000.00 }
+      }
     }
   },
   "propiedades": [
@@ -29,8 +44,8 @@
       "nombre": "ATRIA Tower Formato A",
       "precio": "$2,670,000 MXN",
       "specs": "1 Habitación • 1 Baño • 50 m²",
-      "descripcion": "Eleva tu estilo de vida en un espacio donde el diseño de vanguardia se encuentra con la calidez del hogar. Con una cocina de autor que fusiona mármoles profundos y maderas nobles, cada detalle en ATRIA ha sido curado para quienes no aceptan menos que la excelencia.",
-      "amenidades": ["Lobby", "Coworking", "Sky Bar", "Cine", "Yoga Deck", "Bici Racks", "BBQ Zone", "Mailbox"],
+      "descripcion": "Eleva tu estilo de vida en un espacio donde el diseño de vanguardia se encuentra con la calidez del hogar...",
+      "amenidades": ["Lobby", "Coworking", "Sky Bar", "Cine"],
       "imagenes": ["atria-cocina.jpg", "atria-A.png"]
     },
     {
