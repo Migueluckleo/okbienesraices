@@ -45,3 +45,4 @@
     backdrop-filter: blur(4px);
     border-top: 1px solid rgba(255,255,255,0.2);
 }
+  * { font-family: 'Albert Sans', sans-serif !important; }
