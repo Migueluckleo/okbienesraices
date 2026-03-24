@@ -5,7 +5,7 @@
       "subtitulo": "Colonia Americana",
       "descripcion": "Descubre espacios diseñados para elevar tu estilo de vida. Contamos con las mejores ubicaciones y acabados de lujo en cada uno de nuestros desarrollos.",
       "imagen": "assets/atria.png",
-      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Atria%20Tower",
+      "enlaceContacto": "https://wa.me/523313474117?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Atria%20Tower",
       "metricas": {
         "plusvalia": 10.6,
         "airbnb": { "min": 879.66, "max": 1583.16 },
@@ -17,7 +17,7 @@
       "subtitulo": "Zona Lafayette",
       "descripcion": "Un refugio urbano. Diseñado bajo la comodidad y la funcionalidad en una de las zonas con mayor plusvalía e inversión.",
       "imagen": "assets/severo.png",
-      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Severo%20Díaz",
+      "enlaceContacto": "https://wa.me/523313474117?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Severo%20Díaz",
       "metricas": {
         "plusvalia": 9.8,
         "airbnb": { "min": 950.00, "max": 1700.00 },
@@ -29,7 +29,7 @@
       "subtitulo": "Corazón Cultural",
       "descripcion": "Conoce un nuevo estilo de vida, en Villamorelos encontrarás el confort con la mejor ubicación en el corazón de un entorno de cultura y gran demanda.",
       "imagen": "assets/villamorelos.png",
-      "enlaceContacto": "https://wa.me/523315556433?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Villamorelos",
+      "enlaceContacto": "https://wa.me/523313474117?text=Estoy%20interesado%20en%20agendar%20una%20visita%20a%20Villamorelos",
       "metricas": {
         "plusvalia": 12.1,
         "airbnb": { "min": 1100.00, "max": 1950.00 },

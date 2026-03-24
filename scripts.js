@@ -182,7 +182,7 @@ function renderizarDetalle(data) {
     const btnWhatsapp = document.getElementById('btn-whatsapp');
     if (btnWhatsapp) {
         const mensajeWa = `Hola, me interesa la propiedad "${data.nombre}".`;
-        const waLink = `https://wa.me/523315556433?text=${encodeURIComponent(mensajeWa)}`;
+        const waLink = `https://wa.me/523313474117?text=${encodeURIComponent(mensajeWa)}`;
         btnWhatsapp.href = waLink;
     }
 
